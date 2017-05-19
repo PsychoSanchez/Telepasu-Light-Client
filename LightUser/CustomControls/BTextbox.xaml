@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="LightUser.CustomControls.BTextbox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LightUser.CustomControls"
+             mc:Ignorable="d" MaxHeight="24" Height="24" MinHeight="24">
+    <UserControl.Resources>
+        <Image x:Key="SearchIcon" Source="/Images/search.png" />
+    </UserControl.Resources>
+    <Grid x:Name="Parent" Height="{Binding ElementName=Textbox,Path=ActualHeight}">
+        <TextBox Width="{Binding ElementName=Parent,Path=ActualWidth}" Margin="0, 0, 0, 0" x:Name="Textbox" Style="{StaticResource PlaceholderTextbox}" />
+        <Button Click="ClearTextboxButton_Click" x:Name="ClearTextboxButton" Height="15" Width="15" BorderThickness="0" Background="#000000FF" Content="X" Foreground="#696969" HorizontalAlignment="Right" Margin="0, 0, 10, 4"/>
+    </Grid>
+
+</UserControl>

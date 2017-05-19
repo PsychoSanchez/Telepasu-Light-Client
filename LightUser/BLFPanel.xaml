@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LightUser"
+        xmlns:CustomControls="clr-namespace:LightUser.CustomControls" x:Class="LightUser.BLFPanel"
+        mc:Ignorable="d"
+        Title="BLFPanel"  Height="290" MaxHeight="510" MinHeight="188" Width="219" AllowsTransparency="False" WindowStyle="None">
+    <Grid>
+        <Grid Style="{StaticResource HeaderGrid}">
+            <Button Style="{StaticResource ExitButton}" Margin="173, 5, 0, 0"/>
+        </Grid>
+        <Grid x:Name="BlfStatusLabel" Style="{StaticResource BackGroundStyle}" HorizontalAlignment="Left" Height="28" Margin="3,31,0,0" VerticalAlignment="Top" Width="50"/>
+        <Grid x:Name="BlfNumberLabel" Style="{StaticResource BackGroundStyle}" HorizontalAlignment="Left" Height="28" Margin="3,53,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button Margin="55, 31, 0, 0" Style="{StaticResource ContactsButton}" Content="{StaticResource Contacts}" />
+        <Button Margin="106, 31, 0, 0" Style="{StaticResource HistoryButton}" Content="{StaticResource History}"/>
+        <Button Margin="157, 31, 0, 0" Style="{StaticResource SettingsButton}" Content="{StaticResource Settings}"/>
+
+        <CustomControls:BTextbox HorizontalAlignment="Left" Height="25" Margin="3,86,0,0" VerticalAlignment="Top" Width="205"/>
+
+    </Grid>
+</Window>

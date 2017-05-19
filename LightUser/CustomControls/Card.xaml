@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="LightUser.CustomControls.Card"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LightUser.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="66" d:DesignWidth="209">
+    <UserControl.Resources>
+        <Image x:Key="Down" Source="/Images/down.png" />
+        <Image x:Key="DownOn" Source="/Images/down_active.png" />
+        <Image x:Key="Up" Source="/Images/up.png" />
+        <Image x:Key="UpOn" Source="/Images/up_active.png" />
+    </UserControl.Resources>
+    <Grid Style="{StaticResource BackGroundStyle}">
+        <Grid Style="{StaticResource BackGroundStyle}" Width="58" Height="58" Margin="4, 4, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Margin="194, 8, 0, 0" Content="{StaticResource Up}" Style="{StaticResource OrderChangeButton}"/>
+        <Button Margin="194, 20, 0, 0" Content="{StaticResource Down}" Style="{StaticResource OrderChangeButton}"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="LightUser.CustomControls.BCheckbox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LightUser.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="22" d:DesignWidth="125">
+
+    <Grid Style="{StaticResource BackGroundStyle}" MouseDown="Grid_MouseDown">
+            <Grid MouseLeave="CheckBoxPanel_MouseLeave" MouseEnter="CheckBoxPanel_MouseEnter" Name="CheckBoxPanel" Style="{StaticResource NotCheckedCheckbox}" Height="15" Width="35" HorizontalAlignment="Left" Margin="2,0,0,0">
+                
+            </Grid>
+        <TextBlock Name="CheckBoxText" HorizontalAlignment="Left" Margin="40,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="14"><Run Text="TextBlock"/><InlineUIContainer>
+            </InlineUIContainer></TextBlock>
+    </Grid>
+</UserControl>
