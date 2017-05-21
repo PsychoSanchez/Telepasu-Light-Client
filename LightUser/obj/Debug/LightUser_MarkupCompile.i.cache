@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Evgen\Documents\Visual Studio 2017\Projects\LightUser\LightUser\obj\Debug\
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\
 LightUser
 none
 false
 DEBUG;TRACE
-C:\Users\Evgen\Documents\Visual Studio 2017\Projects\LightUser\LightUser\App.xaml
-6-1519362852
+C:\Users\Evgen\Documents\LightUser\LightUser\App.xaml
+7-102282030
 
-19-386239810
-681690540632
-Authorization.xaml;BLFPanel.xaml;CustomControls\BCheckbox.xaml;CustomControls\BTextblock.xaml;CustomControls\BTextbox.xaml;CustomControls\Card.xaml;
+29-1702932980
+711348316814
+Authorization.xaml;BLFPanel.xaml;CustomControls\BCheckbox.xaml;CustomControls\BTextblock.xaml;CustomControls\BTextbox.xaml;CustomControls\Card.xaml;Splash.xaml;
 
 True
 

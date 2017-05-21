@@ -33,3 +33,43 @@ C:\Users\Evgen\Documents\Visual Studio 2017\Projects\LightUser\LightUser\obj\Deb
 C:\Users\Evgen\Documents\Visual Studio 2017\Projects\LightUser\LightUser\obj\Debug\LightUser.pdb
 C:\Users\Evgen\Documents\Visual Studio 2017\Projects\LightUser\LightUser\obj\Debug\CustomControls\Card.g.cs
 C:\Users\Evgen\Documents\Visual Studio 2017\Projects\LightUser\LightUser\obj\Debug\CustomControls\Card.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\LightUser.exe.config
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\LightUser.exe
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\LightUser.pdb
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\Authorization.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\BLFPanel.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\BCheckbox.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\BTextblock.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\BTextbox.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\Card.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\App.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser_MarkupCompile.cache
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser_MarkupCompile.lref
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\App.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\Authorization.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\BLFPanel.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\BCheckbox.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\BTextblock.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\BTextbox.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\CustomControls\Card.baml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser.g.resources
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser.Properties.Resources.resources
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser.csproj.GenerateResource.Cache
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser.exe
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser.pdb
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\FontAwesome.WPF.dll
+C:\Users\Evgen\Documents\LightUser\LightUser\bin\Debug\FontAwesome.WPF.xml
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\LightUser.csprojResolveAssemblyReference.cache
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\Splash.g.cs
+C:\Users\Evgen\Documents\LightUser\LightUser\obj\Debug\Splash.baml

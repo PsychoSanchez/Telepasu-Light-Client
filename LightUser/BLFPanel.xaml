@@ -4,20 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LightUser"
-        xmlns:CustomControls="clr-namespace:LightUser.CustomControls" x:Class="LightUser.BLFPanel"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:CustomControls="clr-namespace:LightUser.CustomControls" x:Class="LightUser.BlfPanel"
         mc:Ignorable="d"
-        Title="BLFPanel"  Height="290" MaxHeight="510" MinHeight="188" Width="219" AllowsTransparency="False" WindowStyle="None">
-    <Grid>
+        Title="BLFPanel"  Height="290" MaxHeight="510" MinHeight="188" MinWidth="224" MaxWidth="224" Width="224" AllowsTransparency="False" WindowStyle="None">
+    <Grid HorizontalAlignment="Left" Width="211">
         <Grid Style="{StaticResource HeaderGrid}">
-            <Button Style="{StaticResource ExitButton}" Margin="173, 5, 0, 0"/>
+            <Button Click="ExitButton_OnClick" Style="{StaticResource ExitButton}" Margin="173, 5, 0, 0"/>
         </Grid>
-        <Grid x:Name="BlfStatusLabel" Style="{StaticResource BackGroundStyle}" HorizontalAlignment="Left" Height="28" Margin="3,31,0,0" VerticalAlignment="Top" Width="50"/>
-        <Grid x:Name="BlfNumberLabel" Style="{StaticResource BackGroundStyle}" HorizontalAlignment="Left" Height="28" Margin="3,53,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button Margin="55, 31, 0, 0" Style="{StaticResource ContactsButton}" Content="{StaticResource Contacts}" />
-        <Button Margin="106, 31, 0, 0" Style="{StaticResource HistoryButton}" Content="{StaticResource History}"/>
-        <Button Margin="157, 31, 0, 0" Style="{StaticResource SettingsButton}" Content="{StaticResource Settings}"/>
+        <TextBlock Foreground="White" x:Name="BlfStatusLabel" TextAlignment="Center" Background="#E3E3E3" HorizontalAlignment="Left" Height="28" Margin="3,31,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBlock Foreground="White" x:Name="BlfNumberLabel" TextAlignment="Center" Background="#E3E3E3" HorizontalAlignment="Left" Height="28" Margin="3,53,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button Margin="55, 31, 0, 0" Style="{StaticResource ContactsButton}" />
+        <Button Margin="106, 31, 0, 0" Style="{StaticResource HistoryButton}" />
+        <Button Margin="157, 31, 0, 0" Style="{StaticResource SettingsButton}" Click="ButtonBase_OnClick"/>
 
         <CustomControls:BTextbox HorizontalAlignment="Left" Height="25" Margin="3,86,0,0" VerticalAlignment="Top" Width="205"/>
-
+        <StackPanel x:Name="CardsPanel" HorizontalAlignment="Left" Height="156" Margin="10,116,0,0" VerticalAlignment="Top" Width="191">
+            <CustomControls:Card></CustomControls:Card>
+        </StackPanel>
+        <Grid x:Name="Spinner" Visibility="Hidden" Background="White" Margin="0,116,0,0">
+            <fa:ImageAwesome Foreground="#696969" Icon="Refresh" Spin="True" Margin="62,39" />
+        </Grid>
     </Grid>
 </Window>

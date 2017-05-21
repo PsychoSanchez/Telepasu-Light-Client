@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Windows;
 using LightUser.Helpers;
 using LightUser.CommandService;
+using LightUser.Events.EventArgs;
 
 namespace LightUser
 {
@@ -22,7 +23,6 @@ namespace LightUser
         //public AMIManager loginAmiManager { get; private set; }
         bool MD5Authorization = true;
         //ConnectionSettings set = new ConnectionSettings();
-        Dictionary<string, string[]> Localization = new Dictionary<string, string[]>();
         /// <summary>
         /// Конструктор панели авторизации
         /// </summary>
@@ -106,9 +106,25 @@ namespace LightUser
             //CommandDispatcher.SendAuthMessage();
         }
 
-        private void CommandDispatcher_ConnectSucceded(object sender, EventArgs e)
+        private void CommandDispatcher_ConnectSucceded(object sender, ConnectEventArgs e)
         {
-            //CommandDispatcher.SendAuthMessage("hjok123", "asterisk");
+            if (e.Connected)
+            {
+                CommandDispatcher.OnAuthOver += CommandDispatcherOnOnAuthOver;
+                CommandDispatcher.SendAuthMessage("light", "hjok123");
+            }
+
+        }
+
+        private void CommandDispatcherOnOnAuthOver(object sender, AuthEventArgs eventArgs)
+        {
+            MessageBox.Show(eventArgs.AuthResponse.Message);
+            if (eventArgs.AuthResponse.Status == 200)
+            {
+                var asd = sender;
+                var blf = new BlfPanel();
+                blf.Show();
+            }
         }
 
         /// <summary>

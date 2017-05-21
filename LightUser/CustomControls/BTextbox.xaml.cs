@@ -28,6 +28,7 @@ namespace LightUser.CustomControls
             this.LostFocus += AddText;
             this.Text = "Enter text here...";
             Textbox.Text = "Enter text here...";
+            ClearTextboxButton.Visibility = Visibility.Hidden;
         }
         
         public void RemoveText(object sender, EventArgs e)
@@ -50,7 +51,17 @@ namespace LightUser.CustomControls
 
         private void ClearTextboxButton_Click(object sender, RoutedEventArgs e)
         {
-            RemoveText(sender, e);
+            this.Text = "";
+            Textbox.Text = "";
+        }
+
+        private void Textbox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Textbox.Text != "Enter text here..." && Textbox.Text != "")
+            {
+                ClearTextboxButton.Visibility = Visibility.Visible;
+            }
+            else ClearTextboxButton.Visibility = Visibility.Hidden;
         }
     }
 }

@@ -1,0 +1,155 @@
+﻿<Window x:Class="LightUser.Splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LightUser"
+        mc:Ignorable="d"
+        Title="Splash" Height="210" Width="488" AllowsTransparency="False" WindowStyle="None">
+    <Window.Resources>
+        <ImageBrush x:Key="Transfer" ImageSource="Images/trasfer.bmp"/>
+        <ImageBrush x:Key="TransferOn" ImageSource="/Images/trasfer_on.bmp"/>
+        <ImageBrush x:Key="TransferOff" ImageSource="/Images/trasfer_off.bmp"/>
+        <ImageBrush x:Key="TransferBlind" ImageSource="/Images/blind_trasfer.bmp"/>
+        <ImageBrush x:Key="TransferBlindOn" ImageSource="/Images/blind_trasfer_on.bmp"/>
+        <ImageBrush x:Key="TransferBlindOff" ImageSource="/Images/blind_trasfer_off.bmp"/>
+        <ImageBrush x:Key="Answer" ImageSource="Images/hold.bmp"/>
+        <ImageBrush x:Key="AnswerOn" ImageSource="/Images/hold_on.bmp"/>
+        <ImageBrush x:Key="AnswerOff" ImageSource="/Images/hold_off.bmp"/>
+        <ImageBrush x:Key="Hangup" ImageSource="/Images/hangup.bmp"/>
+        <ImageBrush x:Key="HangupOn" ImageSource="/Images/hangup_on.bmp"/>
+        <ImageBrush x:Key="HangupOff" ImageSource="/Images/hangup_off.bmp"/>
+        <ImageBrush x:Key="Script" ImageSource="Images/cmd.bmp"/>
+        <ImageBrush x:Key="ScriptOn" ImageSource="/Images/cmd_on.bmp"/>
+        <ImageBrush x:Key="ScriptOff" ImageSource="/Images/cmd_off.bmp"/>
+        <ImageBrush x:Key="Conference" ImageSource="/Images/conference.bmp"/>
+        <ImageBrush x:Key="ConferenceOn" ImageSource="/Images/conference_on.bmp"/>
+        <ImageBrush x:Key="ConferenceOff" ImageSource="/Images/conference_off.bmp"/>
+        <ImageBrush x:Key="EditContact" ImageSource="/Images/edit_contact.bmp"/>
+        <ImageBrush x:Key="EditContactOn" ImageSource="/Images/edit_contact_on.bmp"/>
+        <ImageBrush x:Key="History" ImageSource="/Images/historys.bmp"/>
+        <ImageBrush x:Key="HistoryOn" ImageSource="/Images/historys_on.bmp"/>
+        <Image x:Key="Mail" Source="Images/mail.bmp"/>
+        <Image x:Key="MailOn" Source="Images/mail_on.bmp"/>
+        <Style x:Key="CreateButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource EditContact}"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource EditContactOn}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="HistoryButtonS" TargetType="{x:Type Button}">
+            <Setter  Property="Background" Value="{StaticResource History}"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter  Property="Background" Value="{StaticResource HistoryOn}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MailButton" TargetType="{x:Type Button}">
+            <Setter Property="Content" Value="{StaticResource Mail}" />
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Content" Value="{StaticResource MailOn}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid Style="{StaticResource HeaderGrid}">
+            <Button Style="{StaticResource ExitButton}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+        </Grid>
+        <Grid Background="#E6E6E6" HorizontalAlignment="Left" Height="111" Margin="5,32,0,0" VerticalAlignment="Top" Width="301">
+            <Grid Background="#B4B4B4" Width="105" Height="105" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3, 3, 0, 0">
+                <Ellipse Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="105" Width="85" Fill="#E6E6E6"></Ellipse>
+                <Ellipse HorizontalAlignment="Left" VerticalAlignment="Top" Height="45" Width="85" Fill="#B4B4B4" Margin="10,0,0,0"/>
+                <Ellipse Margin="37.5, 5, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="30" Fill="#E6E6E6"></Ellipse>
+                <Polygon HorizontalAlignment="Left" VerticalAlignment="Bottom" Fill="#B4B4B4" Points="0,0 105,0 105,50 0, 50" Height="34"/>
+                <Polygon Margin="23, 0, 0, 10" HorizontalAlignment="Left" VerticalAlignment="Bottom" Fill="#E6E6E6" Points="0,0 60,0 60,50 0, 50"/>
+            </Grid>
+            <TextBlock Width="187" FontSize="10" Foreground="White" Background="#B4B4B4" Height="17" HorizontalAlignment="Left" Margin="111,44,0,0" TextWrapping="Wrap" Text="Вы не общались ранее" VerticalAlignment="Top"/>
+            <TextBlock Background="#CCCCFF" Foreground="White" FontSize="9" Height="13" HorizontalAlignment="Left" Margin="111,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+            <Button Style="{StaticResource CreateButton}" BorderThickness="0" HorizontalAlignment="Left" Margin="206,80,0,0" VerticalAlignment="Top" Width="92" Height="28" HorizontalContentAlignment="Right">
+                <Button.Content>
+                    <TextBlock Text="Создать контакт" Margin="0, 0, -20, 0" TextWrapping="Wrap" FontSize="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="50" Height="20" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource HistoryButtonS}" BorderThickness="0" HorizontalAlignment="Left" Margin="111,80,0,0" VerticalAlignment="Top" Width="92" Height="28" HorizontalContentAlignment="Right">
+                <Button.Content>
+                    <TextBlock Text="История звонков" Margin="0, 0, -20, 0" TextWrapping="Wrap" FontSize="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <TextBlock MaxWidth="150" FontSize="10" FontWeight="Bold" HorizontalAlignment="Left" Margin="113,3,0,0" TextWrapping="NoWrap" Text="Неизвестный абонент" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="11" Margin="113,23,0,0" TextWrapping="Wrap" Text="#UserName" VerticalAlignment="Top" Width="150"/>
+            <Button Style="{StaticResource MailButton}" BorderThickness="0" HorizontalAlignment="Left" Margin="268,3,0,0" VerticalAlignment="Top" Height="25" Width="30"/>
+        </Grid>
+        <Grid Background="#E6E6E6" HorizontalAlignment="Left" Height="111" Margin="309,32,0,0" VerticalAlignment="Top" Width="161">
+            <TextBlock TextAlignment="Center" FontSize="14" FontWeight="Bold" Foreground="White" Width="140" HorizontalAlignment="Left" Margin="6,10,0,0" TextWrapping="Wrap" Text="Время: 00:00:00" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Width="156" Margin="0,40,0,0" TextAlignment="Center" Foreground="White" TextWrapping="Wrap" FontSize="10" Text="Продолжительность" VerticalAlignment="Top"/>
+            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Width="156" FontSize="24" Foreground="White" Margin="0,65,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="50" Margin="5,146,0,0" VerticalAlignment="Top" Width="468">
+            <Button Style="{StaticResource SplashButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0, 0, 0, 0" VerticalContentAlignment="Bottom" Background="{StaticResource TransferOff}">
+                <Button.Content>
+                    <TextBlock Text="Перевод" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Height="20" Margin="0, 0, 0, -3" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource SplashButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="78,0,0,0" Background="{StaticResource TransferBlindOff}" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center">
+                <Button.Content>
+                    <TextBlock Text="Слепой перевод" TextWrapping="NoWrap" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="72" Height="20" Margin="0, 0, 0, -3" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource SplashButton}" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="75" Margin="156,0,0,0"  Background="{StaticResource AnswerOff}">
+                <Button.Content>
+                    <TextBlock Text="Ответить" TextWrapping="NoWrap" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="72" Height="20" Margin="0, 0, 0, -3" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource SplashButton}" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="75" Margin="234,0,0,0"  Background="{StaticResource HangupOff}">
+                <Button.Content>
+                    <TextBlock Text="Сброс" TextWrapping="NoWrap" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="72" Height="20" Margin="0, 0, 0, -3" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource SplashButton}" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="75" Margin="312,0,0,0"  Background="{StaticResource ScriptOff}">
+                <Button.Content>
+                    <TextBlock Text="Скрипт" TextWrapping="NoWrap" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="72" Height="20" Margin="0, 0, 0, -3" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource SplashButton}" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="75" Margin="390,0,0,0"  Background="{StaticResource ConferenceOff}">
+                <Button.Content>
+                    <TextBlock Text="Конференция" TextWrapping="NoWrap" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="72" Height="20" Margin="0, 0, 0, -3" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

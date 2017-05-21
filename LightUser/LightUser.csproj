@@ -8,13 +8,14 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>LightUser</RootNamespace>
     <AssemblyName>LightUser</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -74,8 +78,20 @@
     <Compile Include="CustomControls\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\Contact.cs" />
+    <Compile Include="Events\AuthEvent.cs" />
+    <Compile Include="Events\EventArgs\AuthEventArgs.cs" />
+    <Compile Include="Events\EventArgs\ConnectEventArgs.cs" />
+    <Compile Include="Events\EventArgs\GetContactsEventArgs.cs" />
+    <Compile Include="Helpers\Parser.cs" />
+    <Compile Include="Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserActions\Action.cs" />
+    <Compile Include="UserActions\AsteriskActions\CallAction.cs" />
+    <Compile Include="UserActions\DBActions\GetContactsAction.cs" />
     <Compile Include="UserActions\ProxyActions\AuthAction.cs" />
+    <Compile Include="UserActions\ProxyActions\PingAction.cs" />
     <Page Include="Authorization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -105,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomControls\Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,8 +175,7 @@
     <Resource Include="Images\close_on.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UserActions\AsteriskActions\" />
-    <Folder Include="UserActions\DBActions\" />
+    <Resource Include="Images\mail.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\contacts.bmp" />
@@ -174,6 +193,36 @@
     <Resource Include="Images\down_active.png" />
     <Resource Include="Images\up.png" />
     <Resource Include="Images\up_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blind_trasfer.bmp" />
+    <Resource Include="Images\blind_trasfer_off.bmp" />
+    <Resource Include="Images\blind_trasfer_on.bmp" />
+    <Resource Include="Images\cmd.bmp" />
+    <Resource Include="Images\cmd_off.bmp" />
+    <Resource Include="Images\cmd_on.bmp" />
+    <Resource Include="Images\conference.bmp" />
+    <Resource Include="Images\conference_off.bmp" />
+    <Resource Include="Images\conference_on.bmp" />
+    <Resource Include="Images\edit_contact.bmp" />
+    <Resource Include="Images\edit_contact_on.bmp" />
+    <Resource Include="Images\hangup.bmp" />
+    <Resource Include="Images\hangup_off.bmp" />
+    <Resource Include="Images\hangup_on.bmp" />
+    <Resource Include="Images\hold.bmp" />
+    <Resource Include="Images\hold_off.bmp" />
+    <Resource Include="Images\hold_on.bmp" />
+    <Resource Include="Images\line.png" />
+    <Resource Include="Images\mail_on.bmp" />
+    <Resource Include="Images\no_avatar.bmp" />
+    <Resource Include="Images\no_avatar_on.bmp" />
+    <Resource Include="Images\trasfer.bmp" />
+    <Resource Include="Images\trasfer_off.bmp" />
+    <Resource Include="Images\trasfer_on.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\historys.bmp" />
+    <Resource Include="Images\historys_on.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

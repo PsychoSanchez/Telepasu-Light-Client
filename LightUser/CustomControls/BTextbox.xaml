@@ -9,7 +9,7 @@
         <Image x:Key="SearchIcon" Source="/Images/search.png" />
     </UserControl.Resources>
     <Grid x:Name="Parent" Height="{Binding ElementName=Textbox,Path=ActualHeight}">
-        <TextBox Width="{Binding ElementName=Parent,Path=ActualWidth}" Margin="0, 0, 0, 0" x:Name="Textbox" Style="{StaticResource PlaceholderTextbox}" />
+        <TextBox TextChanged="Textbox_OnTextChanged" Width="{Binding ElementName=Parent,Path=ActualWidth}" Margin="0, 0, 0, 0" x:Name="Textbox" Style="{StaticResource PlaceholderTextbox}" />
         <Button Click="ClearTextboxButton_Click" x:Name="ClearTextboxButton" Height="15" Width="15" BorderThickness="0" Background="#000000FF" Content="X" Foreground="#696969" HorizontalAlignment="Right" Margin="0, 0, 10, 4"/>
     </Grid>
 

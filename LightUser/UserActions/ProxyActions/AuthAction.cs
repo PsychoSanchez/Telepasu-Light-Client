@@ -1,23 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LightUser.UserActions
+﻿namespace LightUser.UserActions
 {
-    public class AuthAction : IAction
+    public sealed class AuthAction : IAction
     {
         public string Tag { get; set; }
-        public string _user { get; set; }
-        public string _secret { get; set; }
+        public string User { get; set; }
+        public string Secret { get; set; }
+        public string Type { get; set; }
         public AuthAction(string guid, string user, string secret)
         {
+            Type = "Light";
             Tag = "AsteriskAction";
-            _user = user;
-            _secret = secret;
-            Action = "AuthAction";
+            User = user;
+            Secret = secret;
+            Action = "Login";
             Guid = guid;
+        }
+        public AuthAction(string user, string secret)
+        {
+            Type = "Light";
+            Tag = "AsteriskAction";
+            User = user;
+            Secret = secret;
+            Action = "Login";
+            Guid = null;
+        }
+
+        public override string ToString()
+        {
+            var message = string.Empty;
+
+            message += "Action: " + Action + "\r\n";
+            message += "Username: " + User + "\r\n";
+            message += "Secret: " + Secret + "\r\n";
+            message += "Type: " + Type + "\r\n";
+
+            return message;
         }
     }
 }
