@@ -6,6 +6,7 @@ using System.Windows.Threading;
 using LightUser.CommandService;
 using LightUser.CustomControls;
 using LightUser.Events.EventArgs;
+using LightUser.Data;
 
 namespace LightUser
 {
@@ -17,8 +18,43 @@ namespace LightUser
         public BlfPanel()
         {
             InitializeComponent();
-            
+
             //Spinner.Visibility = Visibility.Visible;
+
+            Contact asd = new Contact();
+            asd.Id = Guid.Parse("dd6f1175-b76e-4f8b-a451-f1e07f093a24");
+            asd.Number.Add("123");
+            asd.Name.Add("ASd sad");
+
+            var cd = new Card();
+            cd.SetContact(asd);
+            cd.Margin = new Thickness(0, 5, 0, 0);
+            var cd1 = new Card();
+            cd1.SetContact(asd);
+            cd1.Margin = new Thickness(0, 5, 0, 0);
+            var cd2 = new Card();
+            cd2.SetContact(asd);
+            cd2.Margin = new Thickness(0, 5, 0, 0);
+            var cd3 = new Card();
+            cd3.SetContact(asd);
+            cd3.Margin = new Thickness(0, 5, 0, 0);
+            var cd4 = new Card();
+            cd4.SetContact(asd);
+            cd4.Margin = new Thickness(0, 5, 0, 0);
+            var cd5 = new Card();
+            cd5.SetContact(asd);
+            cd5.Margin = new Thickness(0, 5, 0, 0);
+            var cd6 = new Card();
+            cd6.SetContact(asd);
+            cd6.Margin = new Thickness(0, 5, 0, 0);
+
+            CardsPanel.Children.Add(cd);
+            CardsPanel.Children.Add(cd1);
+            CardsPanel.Children.Add(cd2);
+            CardsPanel.Children.Add(cd3);
+            CardsPanel.Children.Add(cd4);
+            CardsPanel.Children.Add(cd5);
+            CardsPanel.Children.Add(cd6);
 
             CommandDispatcher.ConnectSucceded += CommandDispatcher_ConnectSucceded;
             CommandDispatcher.ConnectToProxy();
