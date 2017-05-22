@@ -19,9 +19,11 @@
         <Button Margin="157, 31, 0, 0" Style="{StaticResource SettingsButton}" Click="ButtonBase_OnClick"/>
 
         <CustomControls:BTextbox HorizontalAlignment="Left" Height="25" Margin="3,86,0,0" VerticalAlignment="Top" Width="205"/>
-        <StackPanel x:Name="CardsPanel" HorizontalAlignment="Left" Height="156" Margin="10,116,0,0" VerticalAlignment="Top" Width="191">
-            <CustomControls:Card></CustomControls:Card>
-        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalAlignment="Stretch" Height="auto" Margin="10,115,10,10" VerticalAlignment="Stretch" Width="191">
+            <StackPanel x:Name="CardsPanel">
+                <CustomControls:Card Margin="0, 0, 0, 0"></CustomControls:Card>
+            </StackPanel>
+        </ScrollViewer>
         <Grid x:Name="Spinner" Visibility="Hidden" Background="White" Margin="0,116,0,0">
             <fa:ImageAwesome Foreground="#696969" Icon="Refresh" Spin="True" Margin="62,39" />
         </Grid>

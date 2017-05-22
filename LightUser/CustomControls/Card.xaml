@@ -12,7 +12,7 @@
         <Image x:Key="Up" Source="/Images/up.png" />
         <Image x:Key="UpOn" Source="/Images/up_active.png" />
     </UserControl.Resources>
-    <Grid Style="{StaticResource BackGroundStyle}">
+    <Grid Width="Auto" Style="{StaticResource BackGroundStyle}">
         <Grid Style="{StaticResource BackGroundStyle}" Width="58" Height="58" Margin="4, 4, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Ellipse x:Name="CardStatus" Stroke="Green" StrokeThickness="2">
                 <Ellipse.Fill>
@@ -42,8 +42,8 @@
                 </Polygon.Fill>
             </Polygon>
         </Button>
-        <Button Click="CallButton_OnClick" Style="{StaticResource DefauldButton}" HorizontalAlignment="Left" Background="#9898FF" Content="Call abonent" Height="22" MinWidth="70" Width="80" Margin="67,39,0,5"/>
-        <TextBlock x:Name="NameTextBlock" HorizontalAlignment="Left" Margin="67,4,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="88" Height="30"/>
+        <Button x:Name="CallButton" Click="CallButton_OnClick" Style="{StaticResource DefauldButton}" HorizontalAlignment="Left" Background="#9898FF" Content="Call abonent" Height="22" MinWidth="70" Width="80" Margin="67,39,0,5"/>
+        <TextBlock x:Name="NameTextBlock" HorizontalAlignment="Left" Margin="67,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="88" Height="30"/>
 
     </Grid>
 </UserControl>

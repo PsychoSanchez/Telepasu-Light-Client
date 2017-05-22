@@ -2,6 +2,10 @@
 using System.Windows.Controls;
 using LightUser.CommandService;
 using LightUser.Data;
+using System.IO;
+using System;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace LightUser.CustomControls
 {
@@ -20,11 +24,21 @@ namespace LightUser.CustomControls
         {
             contact = newcontact;
 
-            if (contact.Number.Count > 0)
+            if (contact.Name.Count > 0)
             {
-                NameTextBlock.Text = contact.Number[0];
+                NameTextBlock.Text = contact.Name[0];
             }
 
+            if (contact.Number.Count > 0)
+            {
+                CallButton.Content = contact.Number[0];
+            }
+
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"\\LightUser\\Images\\"+newcontact.Id.ToString()+".jpg";
+            if (File.Exists(path))
+            {
+                ImageSource.ImageSource = new BitmapImage(new Uri(path));
+            }
 
             //if (newcontact.Name.Contains(" "))
             //{
