@@ -39,7 +39,7 @@ namespace LightUser
             }
         }
 
-        private void CommandDispatcher_OnAuthOver(object sender, Events.EventArgs.AuthEventArgs e)
+        private void CommandDispatcher_OnAuthOver(object sender, AuthEventArgs e)
         {
             Dispatcher.Invoke(() =>
             {

@@ -25,6 +25,7 @@ namespace LightUser.CommandService
         public static event EventHandler<GetContactsEventArgs> ContactsLoaded;
         public static event EventHandler<EventArgs> Disconnected; 
         public static string Guid;
+        public static string Exten = "101";
         public static bool ConnectToProxy()
         {
             try
@@ -91,9 +92,9 @@ namespace LightUser.CommandService
                     {
                         case "Login":
                             var loginResponse = JsonConvert.DeserializeObject<AuthEvent>(message);
-                            OnAuthOver?.Invoke(null, new AuthEventArgs(loginResponse));
 
                             SendPingAction();
+                            OnAuthOver?.Invoke(null, new AuthEventArgs(loginResponse));
                             _timer = new Timer(5000);
                             _timer.Elapsed += TimerOnElapsed;
                             _timer.AutoReset = true;
@@ -172,7 +173,7 @@ namespace LightUser.CommandService
         {
             try
             {
-                CallAction action= new CallAction("123", s);
+                CallAction action= new CallAction("123", s, Exten);
 
                 var bytes = Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(action));
                 stream.Write(bytes, 0, bytes.Length);
